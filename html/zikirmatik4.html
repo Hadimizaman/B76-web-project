@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            background-color: #fee6c4;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .mid {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 45px;
+            font-family: arial;
+            font-weight: 700;
+            background-image: url(https://cdn.pixabay.com/photo/2022/03/27/03/16/islamic-7093978_960_720.jpg);
+            background-repeat: no-repeat;
+            background-position: 0 -400px;
+            background-size: cover;
+            height: 100vh;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            width: 280px;
+            height: 280px;
+            margin-top: 100px;
+        }
+        
+        .buttonCount {
+            width: 300px;
+            height: 300px;
+            border: 3px solid #e5dede;
+            background-color: #ff9a1d;
+            box-shadow: 1px 1px 9px 0px;
+            border-radius: 80px;
+            cursor: pointer;
+        }
+        
+        #counter {
+            display: inline-block;
+            padding-top: 75px;
+        }
+        
+        #countTxt {
+            display: inline-block;
+            padding-top: 120px;
+        }
+        
+        .resetBtn {
+            display: inline-block;
+            position: absolute;
+            text-align: center;
+            line-height: 50px;
+            right: 40px;
+            top: 30px;
+            width: 100px;
+            height: 50px;
+            border-radius: 7px;
+            background-color: #ff9a1d8a;
+            cursor: pointer;
+            font-family: arial;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="resetBtn" onclick="reset()">RESET </div>
+
+        <div class="mid">
+            <div class="title"><span id="counter">ONLINE ROSARY</span> </div>
+            <div class="btn buttonCount" onclick="clickME()"><span id="countTxt">0</span> </div>
+        </div>
+    </div>
+
+    <script>
+        let num = 0;
+
+        function reset() {
+            num = 0;
+            document.querySelector("#countTxt").innerHTML = num;
+        }
+
+        function clickME() {
+            num++;
+            document.querySelector("#countTxt").innerHTML = num;
+        }
+    </script>
+</body>
+
+</html>
